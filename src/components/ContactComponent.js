@@ -23,7 +23,7 @@ class Contact extends Component {
                 lastName: false,
                 phoneNum: false,
                 email: false
-            }
+            },
         };
 
         this.handleInputChange = this.handleInputChange.bind(this);
@@ -80,8 +80,8 @@ class Contact extends Component {
         
         this.setState({
             [name]: value
-        });
-    }
+        })
+    };
 
     handleSubmit(event) {
         console.log("Current state is: " + JSON.stringify(this.state));
