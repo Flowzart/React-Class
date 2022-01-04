@@ -96,6 +96,7 @@ class CommentForm extends Component{
                             <div className='form-group'>
                                 <Label htmlFor="rating">Rating</Label>
                                 <Control.select model=".rating" id="rating" name="rating" className="form-control">
+                                <option value={0}>Select...</option>
                                 <option value={1}>1</option>
                                 <option value={2}>2</option>
                                 <option value={3}>3</option>
