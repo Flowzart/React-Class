@@ -34,5 +34,3 @@ export const addCampsites = campsites => ({
     type: ActionTypes.ADD_CAMPSITES,
     payload: campsites
 });
-
-export const addCampsites

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, CardImg, CardText, CardBody, CardTitle } from 'reactstrap';
-import { Loading } from '/LoadingComponent';
+import { Loading } from './LoadingComponent';
 
 
 function Home(props) {
@@ -26,7 +26,7 @@ function Home(props) {
 }
 
 function RenderCard({item, isLoading, errMess}) {
-    if(loading) {
+    if(Loading) {
         return <Loading />;
     }
     if (errMess) {
