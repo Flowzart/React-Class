@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Button, Card, CardImg, CardText, CardBody, CardTitle, Breadcrumb, BreadcrumbItem, Label, Modal, ModalHeader, ModalBody } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import { Control, LocalForm, Errors } from 'react-redux-form';
+import { Loading } from './LoadingComponent';
 
 function RenderCampsite({ campsite }) {
     return (
@@ -36,6 +37,26 @@ function RenderComments({ comments, addComment, campsiteId }) {
     return <div />
 }
 function CampsiteInfo(props) {
+    if(props.isLoading) {
+        return(
+            <div className='container'>
+                <div className='row'>
+                    <Loading />
+                </div>
+            </div>
+        )
+    }
+
+    if(props.errMess) {
+        <div className='container'>
+                <div className='row'>
+                    <div className="col">
+                        <h4>{props.errMess}</h4>
+                    </div>
+                </div>
+            </div>
+    }
+
     if (props.campsite) {
         return (
             <div className='container'>
